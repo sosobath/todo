@@ -7,7 +7,7 @@ function ajoutTodo() {
     let data = {
         description: todo.value
     }
-    fetch('http://localhost:5000/todo', {
+    fetch('https://localhost:5000/todo', {
         method: 'POST',
         headers: {
             "Content-type": 'application/json'
@@ -17,14 +17,14 @@ function ajoutTodo() {
 }
 
 function deleteTodo(indice) {
-    fetch('http://localhost:5000/todo/' + indice, {
+    fetch('https://localhost:5000/todo/' + indice, {
         method: 'DELETE'})
         .then(response => rafraichirHTML())
 }
 
 function rafraichirHTML() {
     todo.value = "";
-    fetch('http://localhost:5000/todo')
+    fetch('https://localhost:5000/todo')
         .then(response => response.json())
         .then(todolist => {
             elementTODOLIST.innerHTML= "";
