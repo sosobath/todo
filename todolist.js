@@ -7,7 +7,7 @@ function ajoutTodo() {
     let data = {
         description: todo.value
     }
-    fetch('https://localhost:5000/todo', {
+    fetch('https://soso10.pythonanywhere.com/todo', {
         method: 'POST',
         headers: {
             "Content-type": 'application/json'
@@ -17,14 +17,14 @@ function ajoutTodo() {
 }
 
 function deleteTodo(indice) {
-    fetch('https://localhost:5000/todo/' + indice, {
+    fetch('https://soso10.pythonanywhere.com/todo/' + indice, {
         method: 'DELETE'})
         .then(response => rafraichirHTML())
 }
 
 function rafraichirHTML() {
     todo.value = "";
-    fetch('https://localhost:5000/todo')
+    fetch('https://soso10.pythonanywhere.com/todo')
         .then(response => response.json())
         .then(todolist => {
             elementTODOLIST.innerHTML= "";
