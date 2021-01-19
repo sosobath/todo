@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>TODO list</title>
+		<style>form > input{width: auto !important;} .deleteBtn{color: red;cursor: pointer;}</style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" />
+        <script defer src="./todolist.js"></script>
+	</head>
+
+	<body>
+		<form class="container">
+			<input type="text" id="todo" placeholder="à faire...">
+			<button type="button" onclick="ajoutTodo()">Ajouter</button>
+        </form>
+        
+        <section class="container">
+            <h3>Ma liste de choses à faire</h3>
+<ul id="todolist">
+	
+</ul>
+        </section>
+	</body>
+
+</html>
